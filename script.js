@@ -18,6 +18,7 @@ modGain.gain.value = 50;
 gainNode.gain.value = 0;
 
 const startCarrier = function () {
+  audioCtx.resume();
   gainNode.gain.value = 1;
 };
 
@@ -46,3 +47,5 @@ document.getElementById("gainSlider").addEventListener("input", updateGain);
 
 carrier.start();
 mod.start();
+
+//used chatGPT for help with debugging
